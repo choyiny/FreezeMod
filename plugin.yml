@@ -1,0 +1,17 @@
+name: FreezeMod
+version: 1.0
+main: net.techmastary.plugins.freezemod.FreezeMod
+description: Freeze naughty cheaty players.
+commands:
+    freeze:
+        usage: /<command> [target player]
+        description: Freeze players.
+    unfreeze:
+        usage: /<command> [target player]
+        description: Unfreeze players.
+    freezeall:
+        usage: /<command>
+        description: Freeze everyone on the server
+    unfreezeall:
+        usage: /<command>
+        description: Unfreeze everyone on the server.
