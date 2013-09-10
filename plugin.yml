@@ -2,12 +2,14 @@ name: FreezeMod
 version: 1.0
 main: net.techmastary.plugins.freezemod.FreezeMod
 description: Freeze naughty cheaty players.
+author: TechMastary
+website: TechMastary.net
 commands:
     freeze:
-        usage: /<command> [target player]
+        usage: /<command> [player]
         description: Freeze players.
     unfreeze:
-        usage: /<command> [target player]
+        usage: /<command> [player]
         description: Unfreeze players.
     freezeall:
         usage: /<command>
