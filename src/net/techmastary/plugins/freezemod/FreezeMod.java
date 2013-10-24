@@ -33,14 +33,14 @@ public class FreezeMod extends JavaPlugin implements Listener {
 				// I'm sad.
 			}
 		} else {
-			System.out.print("[FreezeMod] Metrics was not enabled :(");
+			System.out.println("[FreezeMod] Metrics was not enabled :(");
 		}
 	}
 
 	public boolean onCommand(CommandSender sender, Command cmd, String commandlabel, String[] args) {
 		if (cmd.getName().equalsIgnoreCase("freeze")) {
 			if (args.length == 0) {
-				if (sender.hasPermission("freeze.freeze.self")) {
+				if (sender.hasPermission("freeze.self")) {
 					if (!(sender instanceof Player)) {
 						return false;
 					}
@@ -54,7 +54,7 @@ public class FreezeMod extends JavaPlugin implements Listener {
 				}
 			}
 			Player target = Bukkit.getServer().getPlayer(args[0]);
-			if (!sender.hasPermission("freeze.freeze.other")) {
+			if (!sender.hasPermission("freeze.other")) {
 				sender.sendMessage(ChatColor.RED + "ERROR: " + ChatColor.DARK_RED + "You don't have permission to freeze " + target.getName() + ".");
 				return true;
 			}
@@ -62,7 +62,7 @@ public class FreezeMod extends JavaPlugin implements Listener {
 				sender.sendMessage(ChatColor.RED + "ERROR:" + ChatColor.DARK_RED + "Player not found.");
 				return true;
 			}
-			if ((target.hasPermission("freeze.exempt") && (!sender.hasPermission("freeze.freeze.admin")))) {
+			if ((target.hasPermission("freeze.exempt") && (!sender.hasPermission("freeze.admin")))) {
 				sender.sendMessage(ChatColor.RED + "ERROR:" + ChatColor.DARK_RED + "You cannot freeze " + target.getName() + ".");
 				return true;
 			}
@@ -78,7 +78,7 @@ public class FreezeMod extends JavaPlugin implements Listener {
 
 		}
 		if (cmd.getName().equalsIgnoreCase("unfreeze")) {
-			if (sender.hasPermission("freeze.unfreeze.self")) {
+			if (sender.hasPermission("freeze.self")) {
 				if (args.length == 0) {
 					if (!(sender instanceof Player)) {
 						return false;
@@ -95,7 +95,7 @@ public class FreezeMod extends JavaPlugin implements Listener {
 				return false;
 			}
 			Player target = Bukkit.getServer().getPlayer(args[0]);
-			if (!sender.hasPermission("freeze.unfreeze.other")) {
+			if (!sender.hasPermission("freeze.other")) {
 				sender.sendMessage(ChatColor.RED + "ERROR: " + ChatColor.DARK_RED + "You don't have permission to unfreeze " + target.getName() + ".");
 				return true;
 			}

@@ -7,6 +7,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 
 public class FreezeListener implements Listener {
+	
 	@EventHandler
 	public void onPlayerMove(PlayerMoveEvent event) {
 		if (FreezeMod.frozen.contains(event.getPlayer().getName())) {
