@@ -4,7 +4,7 @@ http://dev.bukkit.org/bukkit-plugins/freezemod/
 
 Features
 ----------
-* Freeze people at will. For fun or for administrating
+* Freeze people at will. For fun or for administrating.
 
 Installation
 ----------
